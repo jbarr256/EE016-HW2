@@ -36,6 +36,15 @@ def inplaceMerge(arr,left,mid,right):
         if(arr[currL] <= arr[currR]):
             currL += 1
         else:
+            tempVal = arr[currR]
+            currIn = currR
+            #shift to the right
+            while(currIn > currL):
+                arr[currIn] = arr[currIn-1]
+                currIn -= 1
+            #swap
+            arr[currL] = tempVal
+            currL,currR,mid += 1
 
 
 def merge_sort(arr,cmp):
