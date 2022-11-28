@@ -78,5 +78,5 @@ def quick_sort(arr,cmp):
         arr[currLeft],arr[right] = arr[right], arr[left]
         inplacequicksort(arr,left,currLeft-1)
         inplacequicksort(arr,currLeft + 1,right)
-
+    inplacequicksort(arr,cmp,arr[0],arr[len(arr)-1])
     pass
