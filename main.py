@@ -26,6 +26,21 @@ def merge_sort(arr,cmp):
 #cmp will be used to compare the first and last element of the array and this will allow the algorithm 
 # to know if it 
 def quick_sort(arr,cmp):
-
+    def inplacequicksort(arr,cmp,left,right):
+        if cmp >= 0: return
+        pivot = 
+        currLeft = a
+        currRight = right -1
+        while currleft <= currRight:
+            while currleft <= currRight and arr[currLeft] < pivot:
+                currLeft += 1
+            while currleft <= currRight and pivot < arr[currRight]:
+                currRight -= 1
+            if currLeft <= currRight:
+                arr[currLeft],arr[currRight] = arr[currRight],arr[currLeft]
+                left,right = left + 1, right - 1
+        arr[currLeft],arr[right] = arr[right], arr[left]
+        inplacequicksort(arr,left,currLeft-1)
+        inplacequicksort(arr,currLeft + 1,right)
 
     pass
