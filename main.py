@@ -32,7 +32,6 @@ def inplaceMerge(arr,left,mid,right):
     # If it is in the correct location , which should hace the left side be equal to or less then the right,then movve on
     #  but if not then shift all elements betweeen the points and swap the points. Repeat until it it reaches end of one side.
     while(currL <= mid and currR <= right):
-        #
         if(arr[currL] <= arr[currR]):
             currL += 1
         else:
@@ -46,7 +45,6 @@ def inplaceMerge(arr,left,mid,right):
             arr[currL] = tempVal
             currL,currR,mid += 1
 
-
 def merge_sort(arr,cmp):
     def inplaceMergeSort(arr,cmp,left,right):
         if cmp == 0: return
@@ -54,6 +52,8 @@ def merge_sort(arr,cmp):
         inplaceMergeSort(arr,cmp,left,mid)
         inplaceMergeSort(arr,cmp,mid+1,right)
         inplaceMerge(arr,left,mid,right)
+    #Call Function. No need to return anything
+    inplaceMergeSort(arr,cmp,arr[0],arr[len(arr)-1])
     pass
 
 # must be in-place sort
