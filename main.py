@@ -21,6 +21,11 @@ def merge_sort(arr,cmp):
     pass
 
 # must be in-place sort
-
+#Member B wil solve in place quicksort
+#Using a similar code that was found in the book but modified to use cmp
+#cmp will be used to compare the first and last element of the array and this will allow the algorithm 
+# to know if it 
 def quick_sort(arr,cmp):
+
+
     pass
