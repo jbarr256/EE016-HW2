@@ -3,6 +3,7 @@
 #          cmp(a,b)<0   if a should be placed before b,
 #          cmp(a,b)==0  if arr is still sorted after a and b are exchanged,
 #          cmp(a,b)>0   if a should be placed behind b.
+from random import Random, randint
 def multi_sort(arr, cmp, method="None"):
     if(method=="quick"):
         quick_sort(arr,cmp)
@@ -28,13 +29,13 @@ def merge_sort(arr,cmp):
 def quick_sort(arr,cmp):
     def inplacequicksort(arr,cmp,left,right):
         if cmp >= 0: return
-        pivot = 
-        currLeft = a
+        pivot = randint(0,len(arr)-1)
+        currLeft = left
         currRight = right -1
-        while currleft <= currRight:
-            while currleft <= currRight and arr[currLeft] < pivot:
+        while currLeft <= currRight:
+            while currLeft <= currRight and arr[currLeft] < pivot:
                 currLeft += 1
-            while currleft <= currRight and pivot < arr[currRight]:
+            while currLeft <= currRight and pivot < arr[currRight]:
                 currRight -= 1
             if currLeft <= currRight:
                 arr[currLeft],arr[currRight] = arr[currRight],arr[currLeft]
