@@ -54,8 +54,6 @@ def merge_sort(arr,cmp):
         inplaceMergeSort(arr,cmp,left,mid)
         inplaceMergeSort(arr,cmp,mid+1,right)
         inplaceMerge(arr,left,mid,right)
-
-
     pass
 
 # must be in-place sort
